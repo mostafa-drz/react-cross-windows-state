@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -35,4 +36,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  align-self: center;
+  background-color: aliceblue;
+  margin-right: 3%;
+  width: 200px;
+  margin-top: 3%;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: center;
+  flex-basis: 80%;
+  margin: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.cart {
+  flex-basis: 20%;
+  border: 3px solid #ccc;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  border: 1px solid #282c34;
+  margin: 1%;
 }
