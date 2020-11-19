@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Product from './Product'
 import './App.css';
 import {v4 as uuid} from 'uuid'
@@ -76,11 +76,25 @@ function App() {
     const _orders= orders.filter((o)=>o.orderId!==orderId)
     setOrders(_orders)
   }
+
+  useEffect(() => {
+      localStorage.setItem("orders",JSON.stringify(orders))
+  }, [orders])
+
+  useEffect(()=>{
+    window.addEventListener("storage",(e) => {  
+    const {key,newValue} = e
+    if(key==='orders'){
+      setOrders(JSON.parse(newValue))
+    }
+
+    });
+  },[])
   return (
     <div className="App">
     <div className="products">
         {Object.keys(products).map((id)=>(
-      <Product {...products[id]} onAdd={handleAdd}/>
+      <Product {...products[id]} onAdd={handleAdd} key={id}/>
     ))}
     </div>
           <Cart orders={orders} onRemove={handleRemove}/>

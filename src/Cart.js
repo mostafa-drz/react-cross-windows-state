@@ -12,7 +12,7 @@ function Cart(props){
         <h2>Cart</h2>
         {
           orders.map((c)=>(
-          <div className="order">
+          <div className="order" key={c.orderId}>
                    <button style={{border:'none',background:'none',cursor:'pointer'}} onClick={()=>onRemove(c.orderId)}>X</button>
             <img style={{width:'50xp',height:'50px',borderRadius:'100%'}} src={products[c.productId].image} alt={products[c.productId].image}/>
                  <h3>{products[c.productId].name}</h3>
