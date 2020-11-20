@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-cross-tabs-state/static/css/main.49da9b27.chunk.css",
-    "main.js": "/react-cross-tabs-state/static/js/main.9b66f5b7.chunk.js",
-    "main.js.map": "/react-cross-tabs-state/static/js/main.9b66f5b7.chunk.js.map",
+    "main.js": "/react-cross-tabs-state/static/js/main.dee9d6d3.chunk.js",
+    "main.js.map": "/react-cross-tabs-state/static/js/main.dee9d6d3.chunk.js.map",
     "runtime-main.js": "/react-cross-tabs-state/static/js/runtime-main.0c010c25.js",
     "runtime-main.js.map": "/react-cross-tabs-state/static/js/runtime-main.0c010c25.js.map",
     "static/js/2.cf229ce8.chunk.js": "/react-cross-tabs-state/static/js/2.cf229ce8.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0c010c25.js",
     "static/js/2.cf229ce8.chunk.js",
     "static/css/main.49da9b27.chunk.css",
-    "static/js/main.9b66f5b7.chunk.js"
+    "static/js/main.dee9d6d3.chunk.js"
   ]
 }
