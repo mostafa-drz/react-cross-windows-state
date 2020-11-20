@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-cross-tabs-state/static/css/main.49da9b27.chunk.css",
-    "main.js": "/react-cross-tabs-state/static/js/main.dee9d6d3.chunk.js",
-    "main.js.map": "/react-cross-tabs-state/static/js/main.dee9d6d3.chunk.js.map",
-    "runtime-main.js": "/react-cross-tabs-state/static/js/runtime-main.0c010c25.js",
-    "runtime-main.js.map": "/react-cross-tabs-state/static/js/runtime-main.0c010c25.js.map",
-    "static/js/2.cf229ce8.chunk.js": "/react-cross-tabs-state/static/js/2.cf229ce8.chunk.js",
-    "static/js/2.cf229ce8.chunk.js.map": "/react-cross-tabs-state/static/js/2.cf229ce8.chunk.js.map",
-    "static/js/3.df13bb6b.chunk.js": "/react-cross-tabs-state/static/js/3.df13bb6b.chunk.js",
-    "static/js/3.df13bb6b.chunk.js.map": "/react-cross-tabs-state/static/js/3.df13bb6b.chunk.js.map",
-    "index.html": "/react-cross-tabs-state/index.html",
-    "static/css/main.49da9b27.chunk.css.map": "/react-cross-tabs-state/static/css/main.49da9b27.chunk.css.map",
-    "static/js/2.cf229ce8.chunk.js.LICENSE.txt": "/react-cross-tabs-state/static/js/2.cf229ce8.chunk.js.LICENSE.txt"
+    "main.css": "/react-cross-windows-state/static/css/main.49da9b27.chunk.css",
+    "main.js": "/react-cross-windows-state/static/js/main.2547c5d5.chunk.js",
+    "main.js.map": "/react-cross-windows-state/static/js/main.2547c5d5.chunk.js.map",
+    "runtime-main.js": "/react-cross-windows-state/static/js/runtime-main.6110269d.js",
+    "runtime-main.js.map": "/react-cross-windows-state/static/js/runtime-main.6110269d.js.map",
+    "static/js/2.fac9ba99.chunk.js": "/react-cross-windows-state/static/js/2.fac9ba99.chunk.js",
+    "static/js/2.fac9ba99.chunk.js.map": "/react-cross-windows-state/static/js/2.fac9ba99.chunk.js.map",
+    "static/js/3.7a8ae2b3.chunk.js": "/react-cross-windows-state/static/js/3.7a8ae2b3.chunk.js",
+    "static/js/3.7a8ae2b3.chunk.js.map": "/react-cross-windows-state/static/js/3.7a8ae2b3.chunk.js.map",
+    "index.html": "/react-cross-windows-state/index.html",
+    "static/css/main.49da9b27.chunk.css.map": "/react-cross-windows-state/static/css/main.49da9b27.chunk.css.map",
+    "static/js/2.fac9ba99.chunk.js.LICENSE.txt": "/react-cross-windows-state/static/js/2.fac9ba99.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c010c25.js",
-    "static/js/2.cf229ce8.chunk.js",
+    "static/js/runtime-main.6110269d.js",
+    "static/js/2.fac9ba99.chunk.js",
     "static/css/main.49da9b27.chunk.css",
-    "static/js/main.dee9d6d3.chunk.js"
+    "static/js/main.2547c5d5.chunk.js"
   ]
 }
