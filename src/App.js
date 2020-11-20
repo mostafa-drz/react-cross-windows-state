@@ -67,8 +67,9 @@ export const products = {
   },
 }
 function App() {
-  const [orders,setOrders] = useState([])
-
+  // const [orders,setOrders] = useState([])
+  const [orders,setOrders] = useSharedState('orders',[])
+  console.log(orders)
   const handleAdd = (id) => {
     setOrders((orders)=>orders.concat({orderId:uuid(),productId:id}))
   }
@@ -76,20 +77,21 @@ function App() {
     const _orders= orders.filter((o)=>o.orderId!==orderId)
     setOrders(_orders)
   }
+  // use local storage
+  // useEffect(() => {
+  //     localStorage.setItem("orders",JSON.stringify(orders))
+  // }, [orders])
 
-  useEffect(() => {
-      localStorage.setItem("orders",JSON.stringify(orders))
-  }, [orders])
+  // useEffect(()=>{
+  //   window.addEventListener("storage",(e) => {  
+  //   const {key,newValue} = e
+  //   if(key==='orders'){
+  //     setOrders(JSON.parse(newValue))
+  //   }
 
-  useEffect(()=>{
-    window.addEventListener("storage",(e) => {  
-    const {key,newValue} = e
-    if(key==='orders'){
-      setOrders(JSON.parse(newValue))
-    }
+  //   });
+  // },[])
 
-    });
-  },[])
   return (
     <div className="App">
     <div className="products">
@@ -102,4 +104,27 @@ function App() {
   );
 }
 
+function useSharedState(stateKey,d){
+  const [state,setState] = useState(d)
+
+  useEffect(()=>{
+    try{
+      localStorage.setItem(stateKey,JSON.stringify(state))
+    }catch(error){}
+  },[state,stateKey])
+
+  useEffect(()=>{
+    const onReceieveMessage = (e) => {
+     const {key,newValue} = e
+    if(key===stateKey){
+      console.log('setted')
+       setState(JSON.parse(newValue))
+    } 
+    }
+    window.addEventListener('storage',onReceieveMessage)
+    return () => window.removeEventListener('storage',onReceieveMessage)
+  },[stateKey,setState])
+
+  return [state,setState]
+}
 export default App;

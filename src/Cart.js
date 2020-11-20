@@ -3,7 +3,7 @@ import {products} from './App'
 
 function Cart(props){
   const {orders,onRemove} = props
-  const total = orders.reduce((sum,o)=>{
+  const total = orders?.reduce((sum,o)=>{
     return sum = sum + +products[o.productId].price
   },0)
   return (
@@ -11,7 +11,7 @@ function Cart(props){
           <p>Total:{total}</p>
         <h2>Cart</h2>
         {
-          orders.map((c)=>(
+          orders?.map((c)=>(
           <div className="order" key={c.orderId}>
                    <button style={{border:'none',background:'none',cursor:'pointer'}} onClick={()=>onRemove(c.orderId)}>X</button>
             <img style={{width:'50xp',height:'50px',borderRadius:'100%'}} src={products[c.productId].image} alt={products[c.productId].image}/>
