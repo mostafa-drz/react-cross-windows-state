@@ -68,7 +68,7 @@ export const products = {
 }
 function App() {
   // const [orders,setOrders] = useState([])
-  const [orders,setOrders] = useSharedState('orders',[])
+  const [orders,setOrders] = useCrossTabState('orders',[])
   console.log(orders)
   const handleAdd = (id) => {
     setOrders((orders)=>orders.concat({orderId:uuid(),productId:id}))
@@ -104,7 +104,7 @@ function App() {
   );
 }
 
-function useSharedState(stateKey,d){
+function useCrossTabState(stateKey,d){
   const [state,setState] = useState(d)
 
   useEffect(()=>{
