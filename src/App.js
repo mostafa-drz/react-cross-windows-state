@@ -117,7 +117,6 @@ function useCrossTabState(stateKey,d){
     const onReceieveMessage = (e) => {
      const {key,newValue} = e
     if(key===stateKey){
-      console.log('setted')
        setState(JSON.parse(newValue))
     } 
     }
