@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 import Product from './Product'
 import './App.css';
 import {v4 as uuid} from 'uuid'
@@ -106,12 +106,24 @@ function App() {
 
 function useCrossTabState(stateKey,d){
   const [state,setState] = useState(d)
+  const isNewSession = useRef(true)
+
 
   useEffect(()=>{
+    if(isNewSession.current){
+      const currentState = localStorage.getItem(stateKey)
+      if(currentState){
+        setState(JSON.parse(currentState))
+      }else{
+         setState(d)
+      }
+      isNewSession.current=false
+      return
+    }
     try{
       localStorage.setItem(stateKey,JSON.stringify(state))
     }catch(error){}
-  },[state,stateKey])
+  },[state,stateKey,d])
 
   useEffect(()=>{
     const onReceieveMessage = (e) => {
@@ -126,4 +138,5 @@ function useCrossTabState(stateKey,d){
 
   return [state,setState]
 }
+
 export default App;
